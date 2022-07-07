@@ -18,7 +18,7 @@ except (FileNotFoundError):
     creat_name = input("Votre nom RP ? : ")
     creat_last_name = input("Votre prénom RP ? : ")
     config_creat.creat_config_file(creat_name, creat_last_name)
-    print("Votre fichier est configuer relancer le logiciel")
+    print("Votre fichier est configurer relancer le logiciel")
 
 print("Bienvenue sur Follow RP")
 print("Besoin d'aide taper: help")
