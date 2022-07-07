@@ -11,8 +11,6 @@ Suivre votre RP directement dans le terminal encore plus rapide que des notes ou
 5. Taper la commande suivante ``` pip install requests ```
 6. Taper la commande suivante ``` python main.py``` 
 
-
-
 # 📢 Versionnage
 
 1. La gestion des versions se faisant automatiquement.
