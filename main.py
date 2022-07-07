@@ -6,6 +6,7 @@ import sr
 import time
 from assets import config_creat
 from datetime import date
+import version
 today = date.today()
 
 try:
@@ -20,6 +21,9 @@ except (FileNotFoundError):
 
 print("Bienvenue sur Follow RP")
 print("Besoin d'aide taper: help")
+
+version.versions_serach()
+
 i = 'rr'
 
 try:
@@ -42,7 +46,7 @@ try:
             
         if (a == "edit"):
             req = input("Qu'elle personne ? ")
-            information = input("votre nouvelle information  ?")
+            information = input("votre nouvelle information ? ")
             sr.editplayer(req, information)
 
         if (a == 'help'):
@@ -52,4 +56,4 @@ try:
             quit()
     
 except (KeyboardInterrupt):
-    print("\n Fermeture du logiciel")
+    print(" Fermeture du logiciel")
