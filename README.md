@@ -9,6 +9,7 @@ Suivre votre RP directement dans le terminal encore plus rapide que des notes ou
 3. Dézipper le fichier sur vos documents ou endroit favoris
 4. Faire un clique droit dans la fenêtre puis sélectionner ouvrir dans le terminal.
 5. Taper la commande suivante ``` python main.py``` 
+6. Taper la commande suivante ``` pip install requests ```
 
 
 # 📢 Versionnage
