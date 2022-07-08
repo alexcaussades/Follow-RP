@@ -17,6 +17,7 @@ Suivre votre RP directement dans le terminal encore plus rapide que des notes ou
 2. Faire un clique droit dans la fenêtre puis sélectionner ouvrir dans le terminal.
 3. Taper la commande suivante dans votre terminal : ``` python main.py``` 
 
+
 # 📢 Versionnage
 
 1. La gestion des versions se faisant automatiquement.
