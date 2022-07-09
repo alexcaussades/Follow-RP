@@ -12,7 +12,7 @@ today = date.today()
 
 
 try:
-    with open('./assets/config.json') as mon_fichier:
+    with open('assets/config.json') as mon_fichier:
         data = json.load(mon_fichier)
 except (FileNotFoundError):
     print("Absence de fichier de configration sur le logiciel")
@@ -31,11 +31,13 @@ i = 'rr'
 
 try:
     while i :
+
         a = input("Que voulez-vous faire {0} ? : ".format(data['name']))
 
+        a = a.split()
 
-        if (a == "creat"):
-            req = input("Qu'elle est son nom ? ")
+        if (a[0] == "creat"):
+            req = a[1]
             prenom = input("Qu'elle est son prenom ? ")
             age = input("Qu'elle est son age ? ")
             ville = input("Qu'elle sa ville ? (Si pas disponible (n)) ")
@@ -43,19 +45,19 @@ try:
             sr.creatplayer(req, age, prenom, ville, function)
         
 
-        if (a == "sr"):
-            req = input("Qu'elle personne ? ")
+        if (a[0] == "sr"):
+            req = a[1]
             sr.player(req)
             
-        if (a == "edit"):
-            req = input("Qu'elle personne ? ")
+        if (a[0] == "edit"):
+            req = a[1]
             information = input("votre nouvelle information ? ")
             sr.editplayer(req, information)
 
-        if (a == 'help'):
+        if (a[0] == 'help'):
             help.help_funtion()
             
-        if (a == "exit"):
+        if (a[0] == "exit"):
             quit()
     
 except (KeyboardInterrupt):
