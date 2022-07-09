@@ -10,6 +10,7 @@ Suivre votre RP directement dans le terminal encore plus rapide que des notes ou
 4. Faire un clique droit dans la fenêtre puis sélectionner ouvrir dans le terminal.
 5. Taper la commande suivante dans votre terminal : ``` python main.py``` 
 
+
 # 💻 Démarage du logiciel
 
 1. Rendez-vous dans votre dossier où se trouve les fichiers.
