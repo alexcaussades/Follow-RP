@@ -4,10 +4,12 @@ import json
 import help
 import sr
 import time
+import sqlite3
 from assets import config_creat
 from datetime import date
 import version
 today = date.today()
+
 
 try:
     with open('./assets/config.json') as mon_fichier:
@@ -24,9 +26,6 @@ print("Bienvenue sur Follow RP")
 print("Besoin d'aide taper: help")
 
 version.versions_serach()
-
-
-
 
 i = 'rr'
 
