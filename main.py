@@ -16,8 +16,6 @@ class bcolors:
     FAIL = '\033[91m' #RED
     RESET = '\033[0m' #RESET COLOR
 
-
-
 try:
     with open('assets/config.json') as mon_fichier:
         data = json.load(mon_fichier)

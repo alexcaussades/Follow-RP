@@ -35,3 +35,4 @@ def numero_version():
                         info = repro.decode("utf8")
                         res = json.loads(info)
                         webbrowser.open(y[0]["html_url"])
+
