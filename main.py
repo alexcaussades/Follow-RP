@@ -10,9 +10,14 @@ from datetime import date
 import version
 today = date.today()
 
+class bcolors:
+    OK = '\033[92m' #GREEN
+    WARNING = '\033[93m' #YELLOW
+    FAIL = '\033[91m' #RED
+    RESET = '\033[0m' #RESET COLOR
 
 try:
-    with open('./assets/config.json') as mon_fichier:
+    with open('assets/config.json') as mon_fichier:
         data = json.load(mon_fichier)
 except (FileNotFoundError):
     print("Absence de fichier de configration sur le logiciel")
@@ -34,32 +39,46 @@ i = 'rr'
 
 try:
     while i :
+
         a = input("Que voulez-vous faire {0} ? : ".format(data['name']))
 
+        a = a.split()
 
-        if (a == "creat"):
-            req = input("Qu'elle est son nom ? ")
-            prenom = input("Qu'elle est son prenom ? ")
-            age = input("Qu'elle est son age ? ")
-            ville = input("Qu'elle sa ville ? (Si pas disponible (n)) ")
-            function = input("Qu'elle est sa fonction ? (doc, citoyen, cherif, autre) ")
-            sr.creatplayer(req, age, prenom, ville, function)
+        if (a[0] == "creat"):
+            try:
+                req = a[1]
+                prenom = input("Qu'elle est son prenom ? ")
+                age = input("Qu'elle est son age ? ")
+                ville = input("Qu'elle sa ville ? (Si pas disponible (n)) ")
+                function = input("Qu'elle est sa fonction ? (doc, citoyen, cherif, autre) ")
+                sr.creatplayer(req, age, prenom, ville, function)
+            except:
+                print("Manque information player")
         
 
-        if (a == "sr"):
-            req = input("Qu'elle personne ? ")
-            sr.player(req)
+        if (a[0] == "sr"):
+            try:
+                req = a[1]
+                sr.player(req)
+            except:
+                print("Manque information player")
             
-        if (a == "edit"):
-            req = input("Qu'elle personne ? ")
-            information = input("votre nouvelle information ? ")
-            sr.editplayer(req, information)
+        if (a[0] == "edit"):
+            try:
+                req = a[1]
+                information = input("votre nouvelle information ? ")
+                sr.editplayer(req, information)
+            except: 
+                print("Manque information player")
 
-        if (a == 'help'):
+        if (a[0] == 'help'):
             help.help_funtion()
+
+        if (a[0] == 'version'):
+            version.numero_version()
             
-        if (a == "exit"):
+        if (a[0] == "exit"):
             quit()
     
-except (KeyboardInterrupt):
+except (KeyboardInterrupt): 
     print(" Fermeture du logiciel")
